@@ -40,7 +40,8 @@ public class DriverFactory {
             System.out.println("Invalid browser" +browser);
             break;
     }
-    driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+    driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     driver.manage().window().maximize();
     return driver;
     }
